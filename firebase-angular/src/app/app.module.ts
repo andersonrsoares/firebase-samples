@@ -9,7 +9,11 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
+<<<<<<< HEAD
     BrowserModule,
+=======
+    BrowserModule.withServerTransition( {appId: 'something-unique'}),
+>>>>>>> 78ac98fe730eeb0ddcea0e9513aaf2ff65949703
     HttpClientModule
   ],
   providers: [],
