@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+const URL = 'https://testefirebase-6bded.firebaseio.com/messages.json'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+   title = 'app';
+   facts:Observable<any>;
+   constructor(private http: HttpClient){
+      this.facts = this.http.get(URL);
+   }
 }
